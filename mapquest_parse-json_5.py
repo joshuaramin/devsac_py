@@ -22,3 +22,10 @@ while True:
     json_status = json_data["info"]["statuscode"]
     if json_status == 0:
         print("API Status: " + str(json_status) + " = A successful route call.\n")
+        print("=============================================")
+        print("Directions from " + (orig) + " to " + (dest))
+        print("Trip Duration: " + (json_data["route"]["formattedTime"]))
+        print("Kilometers: " + str("{:.2f}".format((json_data["route"]["distance"])*1.61)))
+        print("Fuel Used (Ltr): " + str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78)))
+        print("=============================================")
+
